@@ -220,7 +220,7 @@ $lapanganlist = mysqli_query($conn, "SELECT * FROM lapangan WHERE tempatID = '$_
                                              <span style="font-size: 20px;">Rp <?php echo $list['lapanganPrice']; ?> ,-</span>
                                             </div>
                                          </div>
-                                         <div class="col-3" style="margin: auto;padding-right: 20px;"><a href="book.php?lapangan=<?php echo $list['lapanganID']; ?>"><button type="button" class="btn btn-success">Book</button></a></div>
+                                         <div class="col-3" style="margin: auto;padding-right: 20px;"><a href="book.php?lapangan=<?php echo $list['lapanganID']; ?>&tempat=<?php echo $_GET['tempat']; ?>"><button type="button" class="btn btn-success">Book</button></a></div>
                                     </div>
                           <?php endwhile ?>
             </div>

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 14, 2018 at 01:52 PM
+-- Generation Time: Nov 14, 2018 at 07:33 PM
 -- Server version: 10.1.36-MariaDB
 -- PHP Version: 7.2.10
 
@@ -40,7 +40,11 @@ CREATE TABLE `booking` (
 --
 
 INSERT INTO `booking` (`tempatID`, `lapanganID`, `dateAndTime`, `userName`) VALUES
-('TP001', 'LP003', '2020-12-14 00:00:00', 'pius');
+('TP001', 'LP003', '2010-12-14 15:00:00', 'pius'),
+('TP001', 'LP003', '2020-12-14 00:00:00', 'pius'),
+('TP004', 'LP001', '2020-01-14 13:20:00', 'pius'),
+('TP004', 'LP001', '2020-12-15 00:00:00', 'pius'),
+('TP004', 'LP001', '2021-11-10 10:30:00', 'pius');
 
 -- --------------------------------------------------------
 
@@ -133,7 +137,7 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`userName`, `userPassword`, `userPicture`, `userMoney`) VALUES
-('pius', 'pius', '5bec166d562d0.jpg', 9679999);
+('pius', 'pius', '5bec166d562d0.jpg', 8834999);
 
 --
 -- Indexes for dumped tables
@@ -179,8 +183,7 @@ ALTER TABLE `user`
 -- Constraints for table `booking`
 --
 ALTER TABLE `booking`
-  ADD CONSTRAINT `booking_ibfk_1` FOREIGN KEY (`tempatID`,`lapanganID`) REFERENCES `lapangan` (`tempatID`, `lapanganID`),
-  ADD CONSTRAINT `booking_ibfk_2` FOREIGN KEY (`userName`) REFERENCES `user` (`userName`);
+  ADD CONSTRAINT `booking_ibfk_1` FOREIGN KEY (`userName`) REFERENCES `user` (`userName`);
 
 --
 -- Constraints for table `lapangan`

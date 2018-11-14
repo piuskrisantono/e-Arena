@@ -22,7 +22,7 @@ else if($_SESSION["type"] == "owner"){
   
   require 'functions.php';
 
-  $lapangan = query("SELECT * FROM lapangan WHERE lapanganID = '$_GET[lapangan]'");
+  $lapangan = query("SELECT * FROM lapangan WHERE lapanganID = '$_GET[lapangan]' AND tempatID = '$_GET[tempat]'");
 
   $tempat = query("SELECT * FROM tempat WHERE tempatID = '$lapangan[tempatID]'");
 
